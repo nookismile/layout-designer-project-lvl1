@@ -36,8 +36,12 @@
 }
 
 body {
-    margin: 0;
-    font-family: var(--base-font);
+   font-family: var(--base-font);
+    counter-reset: menu;
+}
+
+ul li {
+    list-style-type: none;
 }
 
 h1,
@@ -68,6 +72,14 @@ h3 {
     font-family: var(--head-font);
     font-size: 34px;
     line-height: 1.2em;
+}
+.small-title {
+    color: var(--white);
+    font-size: 52px;
+}
+
+.small-title span {
+    color: var(--base);
 }
 
 .m-30 {
@@ -154,4 +166,31 @@ section {
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-list-item {
+    position: relative;
+    flex-grow: 1;
+    padding: 24px;
+    background-color: var(--white);
+}
+
+.menu-list-item:first-child {
+    background-color: transparent;
+}
+
+.menu-list-item::before {
+    content: "0";
+    counter-increment: menu;
+    display: block;
+    margin-bottom: 40px;
+    font-family: var(--head-font);
+    font-size: 64px;
+    line-height: 1;
 }
