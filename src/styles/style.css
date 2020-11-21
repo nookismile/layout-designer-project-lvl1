@@ -1,99 +1,157 @@
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("../fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "Neucha";
-  src: url("../fonts/Neucha.woff2") format("woff2"),
-    url("../fonts/Neucha.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Neucha";
+    src: url("../fonts/Neucha.woff2") format("woff2"),
+        url("../fonts/Neucha.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 
 /** CSS STYLE **/
 :root {
-  --white: #ffffff;
-  --half-white: #d7ccc0;
-  --light: #f5f4f0;
-  --base: #fe8a02;
-  --base-dark: #42413c;
-  --dark: #2a2626;
-  --half-dark: #908d8b;
-  --brown: #b09a81;
-  --blue: #1085c5;
-  --base-font: "Open Sans", sans-serif;
-  --head-font: "Neucha", cursive;
-  --font-size: 16px;
-  --line-height: 1.6em;
-  --font-color: #2A2626;
+    --white: #ffffff;
+    --half-white: #d7ccc0;
+    --light: #f5f4f0;
+    --base: #fe8a02;
+    --base-dark: #42413c;
+    --dark: #2a2626;
+    --half-dark: #908d8b;
+    --brown: #b09a81;
+    --blue: #1085c5;
+    --base-font: "Open Sans", sans-serif;
+    --head-font: "Neucha", cursive;
+    --font-size: 16px;
+    --line-height: 1.6em;
+    --font-color: #2A2626;
 }
 
-h1 {
-  font-family: var(--head-font);
-  font-size: 72px;
-  line-height: 1.2em;
+body {
+    margin: 0;
+    font-family: var(--base-font);
+}
+
+h1,
+.title {
+    font-family: var(--head-font);
+    font-size: 72px;
+    line-height: 1.2em;
+    color: var(--base);
+}
+
+h1,
+.title span {
+    display: block;
+    color: var(--base-dark);
+}
+
+.text-center {
+    text-align: center;
 }
 
 h2 {
-  font-family: var(--head-font);
-  font-size: 60px;
-  line-height: 1.2em;
+    font-family: var(--head-font);
+    font-size: 60px;
+    line-height: 1.2em;
 }
 
 h3 {
-  font-family: var(--head-font);
-  font-size: 34px;
-  line-height: 1.2em;
+    font-family: var(--head-font);
+    font-size: 34px;
+    line-height: 1.2em;
+}
+
+.m-30 {
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
 section {
-  position: relative;
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 100px 0;
+    position: relative;
+    padding: 100px 0;
 }
 
-section::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.9;
+.section-light {
+    background-color: var(--half-white);
+}
+
+.section-dark {
+    background-color: var(--dark);
+}
+
+.section-paint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.section-negative {
+    margin-bottom: -100px;
 }
 
 .main-img {
-  position: relative;
-  top: 55px;
-  right: -270px;
-  height: 525px;
+    position: relative;
+    top: 55px;
+    /*  right: -270px;*/
+    height: 525px;
 }
 
-.header-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
-.header-text__item + .header-text__item{
-  margin-left: 30px;
+.block-item + .block-item {
+    margin-left: 30px;
 }
 
 .btn {
-  padding: 12px 24px;
-  color: var(--white);
-  font-weight: bold;
-  background-color: var(--base);
-  text-transform: uppercase;
+    padding: 12px 24px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-orange {
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--base);
+    text-transform: uppercase;
+}
+
+.btn-orange:hover {
+    background-color: var(--base-dark);
+}
+
+.tagline {
+    color: var(--base-dark);
+}
+
+.video {
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
