@@ -44,6 +44,7 @@
 body {
   color: var(--dark);
   font-family: var(--base-font);
+  overflow-x: hidden;
 }
 
 img {
@@ -154,14 +155,29 @@ a {
   margin: 0 auto;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .header-section {
   max-width: 1110px;
   margin: 0 auto;
 }
 
-.p-100-0 {
+.p-relative {
   position: relative;
+}
 
+.p-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.p-100-0 {
   padding: 100px 0;
 }
 
@@ -209,10 +225,6 @@ a {
   opacity: 0.1;
 
   content: "";
-}
-
-.header-title {
-  position: relative;
 }
 
 .main-img {
@@ -290,9 +302,6 @@ a {
 
 .btn-orange {
   color: var(--white);
-  font-weight: bold;
-
-  text-transform: uppercase;
 
   background-color: var(--base);
 }
@@ -301,7 +310,13 @@ a {
   background-color: var(--orange-dark);
 }
 
-.header-btn {
+.btn-uppercase {
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
+
+.m-top-25 {
   margin-top: 20px;
 }
 
@@ -330,7 +345,11 @@ a {
   z-index: 2;
 
   display: block;
+  width: 100%;
+  max-width: 919px;
   margin: 0 auto;
+
+  border: none;
 
   -webkit-filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
@@ -355,15 +374,6 @@ a {
   padding: 24px;
 
   background-color: var(--light);
-}
-
-.position-absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
 }
 
 .menu-list-link:hover {
@@ -401,10 +411,6 @@ a {
 
 .form-wrapper {
   padding: 55px 50px;
-}
-
-.form-block {
-  position: relative;
 }
 
 .title-email {
