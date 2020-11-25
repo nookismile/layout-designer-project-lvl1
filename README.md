@@ -18,4 +18,4 @@ $ make install
 make lint
 ```
 
-link project: http://extra-large-head.surge.sh/
+link project: http://last-glue.surge.sh/
